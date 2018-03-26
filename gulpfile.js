@@ -1,15 +1,18 @@
 var gulp = require('gulp'),
+    nano = require('gulp-cssnano'),
     sass = require('gulp-sass'),
     watch = require('gulp-watch'),
     useref = require('gulp-useref'),
     uglify = require('gulp-uglify'),
-    gulpIf = require('gulp-if'),
-    nano = require('gulp-cssnano'),
-    browserSync = require('browser-sync').create();
+    gulpIf = require('gulp-if');
+browserSync = require('browser-sync').create();
 
+// gulp.task('hello', function() {
+//     console.log('hello');
+// });
 
 gulp.task('sass', function () {
-    return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({
@@ -29,7 +32,7 @@ gulp.task('browserSync', function () {
     browserSync.init({
         server: {
             baseDir: 'app'
-        }
+        },
     })
 })
 

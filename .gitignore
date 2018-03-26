@@ -1,1 +1,95 @@
 node_modules/*
+
+body {
+    height: auto;
+    width: auto;
+    background-image: url(https://media.gettyimages.com/photos/cup-of-coffee-background-picture-id501476710?b=1&k=6&m=501476710&s=612x612&w=0&h=HY7jfM_h8KoEv7EOLAIvf-RWCJB82HU7tyEIew6SseE=); // background-repeat: no-repeat;
+    //background-size: 100%;
+    background-repeat: no-repeat; 
+    font-size: 12pt;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 52%;
+    transform: translate(-50%, -15%);
+    text-align: center;
+    & .title {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        text-align: center;
+        & .roastWell {
+            font-size: 17em;
+            color: #fff;
+            text-align: center;
+            font-family: 'Caferus Basic';
+            display: block;
+            &:before {
+                content: attr(text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: 'Caferus Inline';
+                color: #6d5356;
+            }
+            &:after {
+                content: attr(text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: 'Caferus Shadow';
+                color: #ced6e0;
+            }
+        }
+    }
+}
+
+.order-container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    & .order {
+        position: relative;
+        &:focus {
+            outline: 0;
+            background-color: rgba(0, 170, 255, 0.4);
+        }
+        &:active {
+            position: relative;
+            height: 62px;
+            width: 320px;
+            background: rgba(0, 170, 255, 0.4);
+        }
+    }
+    & .confirm {
+        position: relative;
+        top: 30px;
+        &:focus {
+            outline: 0;
+            background-color: rgba(0, 170, 255, 0.4);
+        }
+        &:active {
+            position: relative;
+            top: 1px;
+            height: 62px;
+            width: 320px;
+            background: rgba(0, 170, 255, 0.4);
+        }
+    }
+}
+
+.option {
+    color: #fff;
+    font-size: 5em;
+    font-family: 'Caferus Regular';
+    border: 5px #fff solid;
+    border-radius: 15px;
+    height: 200px;
+    width: 500px;
+    padding: 10px;
+    background-color: rgba(0, 170, 255, 0.5);
+}
