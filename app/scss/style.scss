@@ -1,9 +1,56 @@
-body {
-    background-color: #ff9ff3;
+@font-face {
+    font-family: "Caferus_Basic";
+    src: url(../fonts/CaferusBasic.otf) format("opentype");
+  }
+
+@font-face {
+    font-family: "Caferus_Inline";
+    src: url(../fonts/CaferusInline.otf) format("opentype");
 }
 
-p {
-    font-size: 160pt;
-    color: #fff;
-    text-align: center;
+@font-face {
+    font-family: "Caferus_Shadow";
+    src: url(../fonts/CaferusShadow.otf) format("opentype");
+}
+
+html {
+    background: url(https://goo.gl/c8uHBe) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 12pt;
+}
+
+.homepage {
+    &-header {
+        display: flex;
+        justify-content: center;
+
+        &-text {
+            font-size: 80pt;
+            color: #fff;
+            display: block;
+            position: relative;
+            font-family: 'Caferus_Basic';
+            text-align: center;
+
+            &:before {
+                content: attr(text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: "Caferus_Inline";
+                color: #6d5356;
+            }
+            &:after {
+                content: attr(text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: "Caferus_Shadow";
+                color: #ced6e0;
+            }
+        }
+    }
 }
