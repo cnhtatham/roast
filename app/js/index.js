@@ -1,3 +1,9 @@
+var homepage = document.getElementById('homepage');
+var signUpPage = document.getElementById('signUpPage');
+
+homepage.style.display = 'none';
+//signUpPage.style.display = 'none';
+
 var orderBtn = document.getElementById('orderBtn');
 var drinkOptions = document.getElementById('drinkOptions');
 var closeOrderBtn = document.getElementById('closeOrder');

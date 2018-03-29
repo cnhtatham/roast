@@ -52,6 +52,7 @@ html {
     color: white;
     border-radius: 0;
     width: 75%;
+    height: auto;
     margin-top: 80px; }
     .homepage-header-button:hover {
       color: #fff; }

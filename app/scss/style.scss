@@ -42,6 +42,7 @@ html {
         &-button {
             @include buttonStyle(white);
             width: 75%;
+            height: auto;
             margin-top: 80px; //margin-bottom: 60px;
             &-closeBtn {
                 left: 60px;
