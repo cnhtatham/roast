@@ -44,16 +44,19 @@
 
     <!-- signUp -->
     <div class="signUpPage" id="signUpPage">
-        <form role="form">
-            <div class="signUpPage-inputgrp form-group-lg">
-                <input type="text" class="form-control" placeholder="First Name">
-                <input type="text" class="form-control" placeholder="Last Name">
-                <input type="text" class="form-control" placeholder="Email Address">
-                <input type="text" class="form-control" placeholder="Mobile">
-                <input type="password" class="form-control" placeholder="Password">
-                <input type="password" class="form-control" placeholder="Confirm Password">
-            </div>
-        </form>
+        <div class="signUpPage-form">
+            <form class="signUpPage-form-input input-group form-group-lg">
+                <input type="text" class="form-control" placeholder="First Name" required>
+                <input type="text" class="form-control" placeholder="Last Name" required>
+                <input type="email" class="form-control" placeholder="Email Address" required>
+                <input type="text" class="form-control" placeholder="Mobile" required>
+                <input type="password" class="form-control" placeholder="Password" required>
+                <input type="password" class="form-control" placeholder="Confirm Password" required>
+                <input type="submit">
+            </form>
+        </div>
+
+
     </div>
 
     <div class="perm">
