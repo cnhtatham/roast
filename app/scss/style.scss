@@ -1,24 +1,8 @@
-@font-face {
-    font-family: "Caferus_Basic";
-    src: url(../fonts/CaferusBasic.otf) format("opentype");
-  }
-
-@font-face {
-    font-family: "Caferus_Inline";
-    src: url(../fonts/CaferusInline.otf) format("opentype");
-}
-
-@font-face {
-    font-family: "Caferus_Shadow";
-    src: url(../fonts/CaferusShadow.otf) format("opentype");
-}
-
+@import 'mixins';
+//
+//----------------------------------------------------------------------------//
+//
 html {
-    background: url(https://goo.gl/c8uHBe) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     font-size: 12pt;
 }
 
@@ -26,30 +10,65 @@ html {
     &-header {
         display: flex;
         justify-content: center;
-
+        align-items: center;
+        flex-direction: column;
+        background: url(https://goo.gl/7RnyhG)/* url(https://goo.gl/c8uHBe) */
+        no-repeat center center fixed;
+        background-size: cover;
+        height: 500px;
+        &-logo {
+            height: 200px;
+            margin-top: 0px;
+            background: transparent;
+        }
         &-text {
-            font-size: 80pt;
-            color: #fff;
+            margin-top: 30px;
+            font-size: 32pt;
+            color: #8c8f94;
             display: block;
             position: relative;
-            font-family: 'Caferus_Basic';
+            font-family: 'didot';
             text-align: center;
-
+            font-weight: 100;
             &:before {
                 content: attr(text);
                 position: absolute;
-                top: 0;
-                left: 0;
-                font-family: "Caferus_Inline";
-                color: #6d5356;
+                top: -2px;
+                left: -2px;
+                font-family: "didot";
+                color: #fff;
             }
-            &:after {
-                content: attr(text);
-                position: absolute;
-                top: 0;
-                left: 0;
-                font-family: "Caferus_Shadow";
-                color: #ced6e0;
+        }
+        &-button {
+            @include buttonStyle(white);
+            width: 75%;
+            margin-top: 80px; //margin-bottom: 60px;
+            &-closeBtn {
+                left: 60px;
+                padding: 2px;
+            }
+        }
+    }
+    &-signUp {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        background-color: #fd9644;
+        padding-bottom: 30px;
+        &-header {
+            font-family: 'didot';
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        &-buttongrp {
+            display: flex;
+            justify-content: space-around;
+            &-button {
+                @include buttonStyle(white);
+                width: 150px;
             }
         }
     }

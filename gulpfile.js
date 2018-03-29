@@ -23,7 +23,7 @@ gulp.task('sass', function () {
 gulp.task('useref', function () {
     return gulp.src('app/*.html')
         .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulpIf('app/js/**/*.js', uglify()))
         .pipe(gulpIf('*.css', nano()))
         .pipe(gulp.dest('dist'))
 });

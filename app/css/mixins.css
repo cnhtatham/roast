@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Caferus_Basic";
+  src: url(../fonts/CaferusBasic.otf) format("opentype"); }
+
+@font-face {
+  font-family: "Caferus_Inline";
+  src: url(../fonts/CaferusInline.otf) format("opentype"); }
+
+@font-face {
+  font-family: "Caferus_Shadow";
+  src: url(../fonts/CaferusShadow.otf) format("opentype"); }
+
+@font-face {
+  font-family: "spark";
+  src: url(../fonts/Spark_Plug.otf) format("opentype"); }

@@ -1,0 +1,40 @@
+// CAFERUS 3 LAYER FONT
+@font-face {
+    font-family: "Caferus_Basic";
+    src: url(../fonts/CaferusBasic.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Caferus_Inline";
+    src: url(../fonts/CaferusInline.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Caferus_Shadow";
+    src: url(../fonts/CaferusShadow.otf) format("opentype");
+}
+
+//SPARK FONT
+@font-face {
+    font-family: "spark";
+    src: url(../fonts/Spark_Plug.otf) format("opentype");
+}
+
+@mixin buttonStyle($color) {
+    width: 200px;
+    background: transparent;
+    border: 1px $color solid;
+    color: $color;
+    border-radius: 0;
+    &:hover {
+        // 3 lvl x1
+        color: #fff;
+    }
+    &:active {
+        // 3 lvl x2
+        color: #ffffffb3;
+        border-color: #ffffffb3;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        outline: 0;
+    }
+}
